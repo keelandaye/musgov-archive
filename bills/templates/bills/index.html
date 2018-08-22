@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ModelUSGov Archives</title>
+</head>
+<body>
+    {% block nav %}
+        {% include 'bills/nav.html' %}
+    {% endblock %}
+    <div class="container" style="margin-top: 12px;">
+        <div class="jumbotron">
+           <h1>ModelUSGov Legislation Archives</h1>
+           <p>All legislation from <a href="//reddit.com/r/ModelUSGov">ModelUSGov</a> is archived here.</p>
+           <p><a class="btn btn-primary" role="button" href="{% url 'bills:list' %}">View Bills</a></p>
+        </div>
+    </div>
+</body>
+</html>

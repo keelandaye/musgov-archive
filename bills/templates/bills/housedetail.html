@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ house.house_name }} Bills List</title>
+</head>
+<body>
+    {% block nav %}
+        {% include 'bills/nav.html' %}
+    {% endblock %}
+    <div class="container" style="margin-top:12px;">
+        <img src="{{ house.logo_url}}" width="auto" height="150px" class="d-inline float-right" />
+        {% if user.is_authenticated %}<p style="display: inline; float: right;"><a href="{% url 'bills:houseupdate' house.pk %}">Edit house</a></p>{% endif %}
+        <h1>{{ house.house_name }}</h1>
+        <h2>Details</h2>
+        <p>Total Bills: <strong>{{ bill_count }}</strong></p>
+    <h2>Bills</h2>
+    {% if bill_list %}
+    <div class="table-responsive table-bordered table-hover">
+        <table class="table" style="margin-bottom: 0px;">
+            <thead class="thead-light">
+                <tr>
+                    <th style="width:80%;">Name</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bill in bill_list %}
+                <tr>
+                    <td><a href="{% url 'bills:detail' bill.pk %}">{{ bill.bill_house.house_code }}. {{ bill.bill_number|stringformat:"03d" }} - {{ bill.bill_name }}</a></td>
+                    <td>{{ bill.date_first_posted.year }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <p>There are no bills available.</p>
+    {% endif %}
+    </div>
+</body>
+</html>

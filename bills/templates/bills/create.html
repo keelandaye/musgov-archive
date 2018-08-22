@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add {{ type }} - ModelUSGov Archives</title>
+</head>
+<body>
+    {% block nav %}
+        {% include 'bills/nav.html' %}
+    {% endblock %}
+    <!--{ if user.is_authenticated }-->
+    <div class="container" style="margin-top: 12px;" align="center">
+        <h2>Adding {{ type }}</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-primary" type="submit" style="background-color:#e6eaed;color:rgb(0,0,0);" value="Save">
+        </form>
+    </div>
+    <!--ELSE-->
+        <!--<meta http-equiv="REFRESH" content="0;url='/accounts/login'">-->
+    <!--ENDIF-->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deleting {{ house.house_name }}</title>
+</head>
+<body>
+     {% block nav %}
+        {% include 'bills/nav.html' %}
+    {% endblock %}
+    <div class="container" style="margin-top: 12px;" align="center">
+        <form method="post">{% csrf_token %}
+            <p>Are you sure you want to delete "{{ house.house_name }}"?</p>
+            <p>Deleting a house will cause <strong>all of its bills to disappear.</strong></p>
+            <p>This should <strong>only</strong> be done with the approval of an admin.</p>
+            <p>Before doing this, all bills should be transferred, if they need to be kept.</p>
+            <p>This action <strong>cannot be undone</strong>.</p>
+            <p></p>
+            <input type="submit" class="btn btn-danger" value="Confirm">
+        </form>
+    </div>
+</body>
+</html>
