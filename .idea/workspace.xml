@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="billsearch.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="billsearch.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bills/templates/bills/billsearch.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -46,6 +46,15 @@
                 <element signature="e#296#302#0" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/legislation/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -84,7 +93,6 @@
         <option value="$PROJECT_DIR$/bills/templates/bills/billedit.html" />
         <option value="$PROJECT_DIR$/bills/forms.py" />
         <option value="$PROJECT_DIR$/bills/templates/bills/detail.html" />
-        <option value="$PROJECT_DIR$/legislation/settings.py" />
         <option value="$PROJECT_DIR$/legislation/urls.py" />
         <option value="$PROJECT_DIR$/bills/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/bills/templates/bills/billupdate.html" />
@@ -99,6 +107,7 @@
         <option value="$PROJECT_DIR$/bills/templates/bills/nav.html" />
         <option value="$PROJECT_DIR$/bills/views.py" />
         <option value="$PROJECT_DIR$/bills/templates/bills/billsearch.html" />
+        <option value="$PROJECT_DIR$/legislation/settings.py" />
       </list>
     </option>
   </component>
@@ -283,13 +292,6 @@
     <entry file="file://$PROJECT_DIR$/bills/forms.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/legislation/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="64" column="70" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/legislation/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -454,6 +456,13 @@
             <element signature="e#296#302#0" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legislation/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
         </state>
       </provider>
     </entry>

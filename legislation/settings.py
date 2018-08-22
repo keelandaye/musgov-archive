@@ -25,7 +25,11 @@ SECRET_KEY = 'uzh1+rdhjy+8c%&bdk2gu_a)(4*3o&hlh#7n$h6ddk6y549&$b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'keelan.pythonanywhere.com',
+    '35.173.69.207',
+    '127.0.0.1',
+]
 
 
 # Application definition
