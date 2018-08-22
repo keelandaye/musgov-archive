@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views import generic
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
+from django.db.models import Q
 
 from .models import Bill, House
 
@@ -118,3 +119,18 @@ class BillDeleteView(generic.DeleteView):
 class HouseDeleteView(generic.DeleteView):
     model = House
     success_url = reverse_lazy('bills:houselist')
+
+
+class BillSearchListView(generic.ListView):
+    model = Bill
+    template_name = 'bills/billsearch.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        result = Bill.objects.filter(Q(bill_name__contains=query) | Q(bill_content__contains=query))
+        return result
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['query'] = self.request.GET.get('q')
+        return context

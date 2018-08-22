@@ -17,4 +17,5 @@ urlpatterns = [
     path('house/<pk>/edit', login_required(views.HouseUpdateView.as_view()), name='houseupdate'),
     path('bill/<pk>/delete', login_required(views.BillDeleteView.as_view()), name='billdelete'),
     path('house/<pk>/delete', login_required(views.HouseDeleteView.as_view()), name='housedelete'),
+    path('bill/search', views.BillSearchListView.as_view(), name='billsearch'),
 ]
