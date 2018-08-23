@@ -137,3 +137,4 @@ class BillSearchListView(generic.ListView):
 
 def guide(request):
     return render(request, 'bills/guide.html')
+

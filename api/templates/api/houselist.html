@@ -1,0 +1,4 @@
+{"success":{% if houses %}true{% else %}false{% endif %}{% for house_id, house_detail in houses.items %}
+, "{{ house_id }}":{"house_name":"{{ house_detail|get_item:"house_name" }}","house_code":"{{ house_detail|get_item:"house_code" }}","logo_url":"{{ house_detail|get_item:"logo_url" }}"}
+{% endfor %}
+}
