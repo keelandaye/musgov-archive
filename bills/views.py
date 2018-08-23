@@ -111,9 +111,7 @@ class HouseUpdateView(generic.UpdateView):
 
 class BillDeleteView(generic.DeleteView):
     model = Bill
-
-    def form_valid(self):
-        return redirect('bills:list')
+    success_url = reverse_lazy('bills:list')
 
 
 class HouseDeleteView(generic.DeleteView):
@@ -127,10 +125,15 @@ class BillSearchListView(generic.ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        result = Bill.objects.filter(Q(bill_name__contains=query) | Q(bill_content__contains=query))
+        result = Bill.objects.filter(Q(bill_name__contains=query) | Q(bill_content__contains=query)
+                                     | Q(bill_number__contains=query))
         return result
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['query'] = self.request.GET.get('q')
         return context
+
+
+def guide(request):
+    return render(request, 'bills/guide.html')

@@ -18,4 +18,5 @@ urlpatterns = [
     path('bill/<pk>/delete', login_required(views.BillDeleteView.as_view()), name='billdelete'),
     path('house/<pk>/delete', login_required(views.HouseDeleteView.as_view()), name='housedelete'),
     path('bill/search', views.BillSearchListView.as_view(), name='billsearch'),
+    path('guide/', login_required(views.guide), name='guide'),
 ]

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Archive Guide</title>
+</head>
+<body>
+    {% block nav %}
+        {% include 'bills/nav.html' %}
+    {% endblock %}
+    <div class="container" style="margin-top:12px;" align>
+    <h1>Archive Guide</h1>
+    <p>Welcome to the ModelUSGov Legislation Archives! If you can see this page, you already have a valid Archive acount, and should be ready to go. This guide explains how the Archive works, how to use it, and the best practices. Please have a quick read through
+        before you start! If you need to link to a specific section of this guide, use the blue hashtags.</p>
+    <h4 id="accounts" style="display: inline-block;">Archive accounts</h4>&nbsp;<a style="color: #3BB9FF;" href="#accounts">#</a>
+    <p>The Archive is publicly accessible. Anybody with an internet connection can see every bill and resolution stored here. However, to be able to add, edit and delete items, you need to have an Archive account. Accounts should only be used by the person
+        for whom they are intended.</p>
+    <p>Accounts can only be made and deleted by admins. Once your account is created, an admin will send you your login details. You can then change your password. While all passwords are encrypted, we recommend not using the same password as your Reddit
+        account. If you need your password to be reset, or to change your username, you need to contact an admin.<br /></p>
+    <h4 id="admins" style="display: inline-block;">Admins</h4>&nbsp;<a style="color: #3BB9FF;" href="#admins">#</a>
+    <p>Some Archive accounts have access to the admin panel. This allows them to access the archive databases. This access is usually only given to whoever maintains the archive and the Head Mod. However, admin rights can be granted to any account by an
+        admin on a temporary or permanent basis. This will only be done when there is a need. While all accounts with admin rights have access to the panel, they do not necessarily have access to all of the features, so restricted access can be granted
+        if required. The admin panel can be customised by a superuser to suit individual admins&#39; needs.<br /></p>
+    <p>The <em>superusers</em> are the people who maintain the back-end of the archive and can edit the code. They have automatic access to every permission and cannot be restricted. Superusers are admins with special abilities, so they can be contacted like
+        other admins. This role is only given to those who are working on the code or the server. Currently there is one superuser: KeelanD. Any technical issues or bugs should be reported to a superuser.<br /></p>
+    <h4 id="permissions" style="display: inline-block;">Permissions</h4>&nbsp;<a style="color: #3BB9FF;" href="#permissions">#</a>
+    <p>All Archive accounts can add, edit, and delete bills, resolutions and houses. It is required, though, that when deleting a house, a user has the approval of an admin, since this will delete all bills associated with that house. Certain permissions,
+        such as the ability to delete items, may be revoked.</p>
+    <h4 id="login" style="display: inline-block;">Logging in and out</h4>&nbsp;<a style="color: #3BB9FF;" href="#login">#</a>
+    <p>To log in, you click on the button in the top-right corner of the website if the button says &quot;Log in.&quot; You will be taken to a page where you can input your username and password. If your credentials are correct, you will be redirected to
+        the page you were on before you clicked the log in button. Be aware that logging out while adding or editing an item will remove your progress unless you click the save button. If you have admin rights, you can also log in by going to the admin
+        panel. Once you log in on either the main Archive or the admin panel, you will be logged in on both, and the same for logging out. Archive accounts without admin rights are not able to log in using the admin panel.</p>
+    <p>If you try to access any page that requires you to be logged in, such as edit pages, you will be taken to the log in page. After logging in, you should be redirected back to the page you were trying to access.</p>
+    <h4 id="items" style="display: inline-block;">Items</h4>&nbsp;<a style="color: #3BB9FF;" href="#items">#</a>
+    <p>The individual documents (bills and resolutions) and the houses are known as &quot;items.&quot; Every item has fields specific to its type, all of which must be filled out. These fields are the essential information about that item. For example, some
+        of the fields for a bill include its name and its content. The Archive won&#39;t let you add or edit an item unless all of the fields are filled. Individual fields are explained in each item&#39;s section of this guide.</p>
+    <h4 id="houses" style="display: inline-block;">Houses</h4>&nbsp;<a style="color: #3BB9FF;" href="#houses">#</a>
+    <p>The houses are the seven legislative chambers in ModelUSGov: the five state assemblies, the House of Representatives, and the Senate. Houses can be removed or added as necessary, like when states are added or abolished. All bills and resolutions must
+        be assigned a house - i.e. the house in which it was first submitted. Houses should not be deleted without admin approval.</p>
+    <p>Each house has three fields, described below:<br /><strong>House name</strong> This is the official name of the house. You should not use abbreviations here.<br /><strong>House code</strong> This is the one- or two-letter code for the House. The code appears in
+        the bill identifier, e.g.<strong>HR</strong>.021, where HR is the two-letter code for the House of Representatives. To avoid ambiguity, state codes are the first letter of the cardinal direction, followed by the letter &quot;S&quot; for state,
+        with the exception of the Northeastern State, which is &quot;NE.&quot; This is despite the fact that most states use identifiers like <strong>B.021</strong> for their bills.<br /><strong>Logo url</strong> This is the url to the image file which contains
+        the seal or flag of the state. It is recommended that you first upload the image to an image host like <a href="//imgur.com">Imgur</a>, instead of using Reddit-hosted files. By default, the logo is set to the United States flag for newly-created
+        houses.</p>
+    <h4 id="bills" style="display: inline-block;">Bills</h4>&nbsp;<a style="color: #3BB9FF;" href="#bills">#</a>
+    <p>Bills are the individual pieces of legislation from ModelUSGov. Each should be archived in its final form - i.e. with all successful amendents added, if necessary. However, amendments from future bills should <strong>not</strong> be added to the original.
+        All bills, not just successful ones, should be archived. Bills should not be archived in Reddit format, and HTML tags will not work. (<em>Note: we are working on this.</em>)</p>
+    <p>Each bill has five fields, described below:<br /><strong>Bill number</strong> This is the number part of a bill&#39;s identifier, e.g. HR.<strong>021</strong> or S.<strong>1004</strong>. You may include leading zeros, but they are not necessary, as the Archive
+        will add them automatically.<br /><strong>Bill name</strong> This is the name of the bill. You should not include the year. Regardless of whether the bill was successful, its name should end with the word &quot;Bill&quot; - you should replace &quot;Act&quot;
+        with &quot;Bill&quot; where applicable. For punctuation and spelling, follow the original title as posted on Reddit. Don&#39;t correct any spelling mistakes, punctuation errors or grammatical errors.<br /><strong>Bill house</strong> This is the house
+        in which the bill was first posted. You are only able to pick from a dropdown list for this field. If the house you need isn&#39;t there, you may need to create it, or contact an admin.<br /><strong>Bill content</strong> This is the text of the bill.
+        Follow the guidelines above about formatting and amendments. If copying and pasting directly from Reddit, ensure that the format matches the standard for other bills in that house. Like with the name, don&#39;t correct spelling, punctuation or
+        grammar.<br /><strong>Date first posted</strong> This is the date on which the bill was first posted on Reddit. This is not the date it was submitted. To avoid database errors, it should be formatted YYYY-MM-DD. (<em>Note: We will add a date selector in the future.</em>)
+        All dates are in <strong>Eastern Standard Time</strong> only. If you are living outside that timezone, please convert the date into EST. E.g. if you live in the UK and Reddit says it was posted at 2 am GMT on July 5th 2018, you should actually record
+        this as July 4th 2018, since in EST, it&#39;s 9 pm on July 4th. This is not essential information, and the earliest date available should be recorded if you can&#39;t find the first date.</p>
+    <h4 id="resolutions" style="display: inline-block;">Resolutions</h4>&nbsp;<a style="color: #3BB9FF;" href="#resolutions">#</a>
+    <p>Resolutions are not available yet on the Archive, but you can expect that they will have the same fields as bills.</p>
+    <h4 id="structure" style="display: inline-block;">Archive structure</h4>&nbsp;<a style="color: #3BB9FF;" href="#structure">#</a>
+    <p>The archive currently has three archive pages: the Houses page, the Bills page, and the Resolutions page. The House page provides a list of all houses. Clicking on any of the names will send you to a page that gives details about the house and a list
+        of all the bills and resolutions associated with it. Clicking on any of these will bring you to a page with the bill&#39;s or resolution&#39;s text. The Bills page provides you with a list of all bills, along with the year they were published.
+        Clicking on any of the names will bring you to the same page with its text. The Resolutions page is similar to the Bills page, but instead it gives a list of resolutions.</p>
+    <h4 id="adding" style="display: inline-block;">Adding items</h4>&nbsp;<a style="color: #3BB9FF;" href="#adding">#</a>
+    <p>To add an item, you should go onto the list page for that item. There, if you are logged in, you will see a blue link in the top right. If you click on this, you will be brought to a page where you input the information into the fields. When you are
+        finished, click the &quot;save&quot; button. The Archive will validate all the information you submitted and then upload it to the database. Within a second or two, you should be redirected to the individual page for the item you have just added.
+        If any information is missing, or not formatted correctly, you will be prompted to fix it. Once taken to the new page, you should briefly read over it to ensure everything was processed correctly.</p>
+    <h4 id="editing" style="display: inline-block;">Editing items</h4>&nbsp;<a style="color: #3BB9FF;" href="#editing">#</a>
+    <p>To edit an item, you should go to the individual page for that item. There, if you are logged in, you will see a blue link in the top right. If you click on this, you will be brought to a page similar to the &quot;add&quot; page, but with the fields
+        already filled with the information. You can edit any of the fields, and press the &quot;Save&quot; button once you are finished. The Archive will validate all the information you submitted and then upload it to the database. Within a second or
+        two, you should be redirected to the individual page for the item you have just added. If any information is missing, or not formatted correctly, you will be prompted to fix it. Once taken to the new page, you should briefly read over it to ensure
+        everything was processed correctly.<br /></p>
+    <h4 id="deleting" style="display: inline-block;">Deleting items</h4>&nbsp;<a style="color: #3BB9FF;" href="#deleting">#</a>
+    <p>To delete an item, you need to go to the edit page for the item. At the bottom, you will see a red link. Once you click this, you will be asked to confirm. Please read over the warnings provided to see if any apply in this case. If you&#39;re satisfied
+        that it is okay to delete the item, then you may click the red &quot;Confirm&quot; button. After that, you will be taken to list page for that item. We recommend you confirm the item was successfully deleted by either searching for it in the search
+        box, looking through the list, or pressing Ctrl+F and searching for it.</p>
+    <p>Admins can delete items in bulk on the admin panel, and can bypass the daily delete limit, or disable yours. You should contact an admin if you need help with this.</p>
+</div>
+</body>
+</html>

@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'keelan.pythonanywhere.com',
     '35.173.69.207',
     '127.0.0.1',
+    'localhost',
 ]
 
 
