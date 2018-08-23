@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Documentation - Archive API</title>
+</head>
+<body>
+    {% block nav %}
+        {% include 'bills/nav.html' %}
+    {% endblock %}
+    <div class="container" style="margin-top:12px;" align>
+    <h1>Archive API</h1>
+    <p>Welcome to the Archive API. We&#39;ve developed a versatile RESTful API for public use. We hope that you can utilize this API in your own projects. Here, you can find a guide to using the API.</p>
+    <p>The API can be queried through the address<kbd>http://keelan.pythonanywhere.com/api/</kbd>. All responses are given in JSON.</p>
+    <h4>Bills</h4>
+    <p>You can access all bills stored in the Archive. You can access them individually, or in specific groups.</p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/bill</kbd>will return all bills. They are sorted by ID number.</p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/bill/&lt;name&gt;</kbd>will return the bill with the exact name specified. There is no search functionality yet. The name is exactly as it appears on the Archive website, excluding the bill identifier (e.g.
+        HR.001, S.1004), with underscores replacing spaces. For example, the &quot;Back to the Moon Bill&quot; could be accessed using<em>/api/bill/Back_to_the_Moon_Bill</em>. This parameter is case sensitive.</p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/bill/&lt;house&gt;/&lt;number&gt;</kbd>will return the bill with the exact house and number specified. To specify the house, you can use the house id, the house code (case insensitive), or the name of the
+        house. Similar to bill names, the name of the house is case sensitive, and must be exactly as it appears on the website, with underscores instead of spaces (e.g. House_of_Representatives). An easy method for this parameter is to take the bill
+        identifier (e.g. HR.001, S.1004) and replace the period with a slash - HR.001 becomes<em>/api/bill/HR/001</em>. You do not need to include leading zeros in bill numbers.</p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/house/&lt;house&gt;/bills</kbd>will return all bills from the house specified. They are sorted by ID number. To specify the house, you can use the house id (see the section on Houses), the house code (case
+        insensitive), or the name of the house. Similar to bill names, the name of the house is case sensitive, and must be exactly as it appears on the website, with underscores instead of spaces (e.g. House_of_Representatives).</p>
+    <h4>Houses</h4>
+    <p>You can access all houses and their associated bills.</p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/house</kbd>will return all houses. They are sorted by ID number.</p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/house/&lt;house&gt;</kbd>will return the house specified. To specify the house, you can use the house id (see the section on Houses), the house code (case insensitive), or the name of the house. Similar to
+        bill names, the name of the house is case sensitive, and must be exactly as it appears on the website, with underscores instead of spaces (e.g. House_of_Representatives).<br /></p>
+    <h4>Examples</h4>
+    <p>These are not exhaustive lists. There are other combinations that are not given here.</p>
+    <p>The following queries will all return the details for the House of Representatives.</p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/house/1/</kbd></p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/house/HR</kbd></p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/house/hr</kbd></p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/House_of_Representatives</kbd></p>
+    <p>The following queries will all return the &quot;Back to the Moon Bill.&quot;</p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/bill/HR/001</kbd></p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/bill/HR/1</kbd></p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/bill/hr/1</kbd></p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/bill/House_of_Representatives/1</kbd></p>
+    <p><kbd>http://keelan.pythonanywhere.com/api/bill/Back_to_the_Moon_Bill</kbd></p>
+</div>
+</body>
+</html>

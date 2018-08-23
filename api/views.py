@@ -4,8 +4,9 @@ from django.db.models import Q
 
 from bills.models import Bill, House
 
+
 def index(request):
-    pass
+    return render(request, 'api/doc.html')
 
 
 def houselist(request):

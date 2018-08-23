@@ -1,4 +1,4 @@
 {"success":{% if bills %}true{% else %}false{% endif %}{% for bill_id, bill_detail in bills.items %}
-, "{{ bill_id }}":{"bill_number":"{{ bill_detail|get_item:"bill_number" }}","bill_name":"{{ bill_detail|get_item:"bill_name" }}","bill_house":"{{ bill_detail|get_item:"bill_house" }}"}
+, "{{ bill_id }}":{"bill_number":"{{ bill_detail|get_item:"bill_number" }}","bill_name":"{{ bill_detail|get_item:"bill_name" }}","bill_house":"{{ bill_detail|get_item:"bill_house" }}","bill_content":"{{ bill_detail|get_item:"bill_content"}}","date_first_posted":"{{ bill_detail|get_item:"date_first_posted"}}"}
 {% endfor %}
 }
